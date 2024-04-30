@@ -1,4 +1,3 @@
-// Login.js
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { auth } from "../Config/Firebase";
@@ -32,7 +31,14 @@ const Login = () => {
             <section className="background-radial-gradient overflow-hidden">
                 <div className="container px-4 py-5 px-md-5 text-center text-lg-start my-5  form-container">
                     <div className="row gx-lg-5 align-items-center mb-5">
-                        <div className="col-lg-6 mb-5 mb-lg-0" style={{ zIndex: 10 }}></div>
+                        <div className="col-lg-6 mb-5 mb-lg-0" style={{ zIndex: 10 }}>
+                            <div className="left-text text-caenter">
+                                <h2>Welcome Back!</h2>
+                                <p>"The purity of a person's heart can be quickly measured by how they regard animals." - Unknown</p>
+                               
+                                <img src="./assets/img/animals.png" alt="Welcome Back Image" className="img-fluid" />
+                            </div>
+                        </div>
                         <div className="col-lg-6 mb-5 mb-lg-0 position-relative">
                             <div className="card bg-glass">
                                 <div className="card-body px-4 py-5 px-md-5">
@@ -49,9 +55,8 @@ const Login = () => {
                                         <input type="password" id="password" className="form-control" required
                                             value={password} onChange={(e) => setPassword(e.target.value)} />
                                         <button type="submit" className="btn btn-primary btn-block mt-4">Login</button>
-                                        <div className="text-center mt-3">
-                                            <span>No account yet? <Link to="/signup">Sign up here</Link></span>
-                                        </div>
+                                      
+                                        <p>If you don't have an account yet, <Link to="/signup">Sign Up Here</Link>.</p>
                                     </form>
                                     {errorMsg && (
                                         <div className="error-msg mt-3">{errorMsg}</div>

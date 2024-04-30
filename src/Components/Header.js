@@ -6,8 +6,8 @@ function Header() {
     <div>
   <header>
     <h1 className="site-heading text-center text-faded d-none d-lg-block">
-      <span className="site-heading-upper text-primary mb-3">A Free Bootstrap Business Theme</span>
-      <span className="site-heading-lower">Business Casual</span>
+   
+      <span className="site-heading-lower">Pawsitively Obsessed</span>
     </h1>
   </header>
   {/* Navigation*/}
@@ -19,7 +19,7 @@ function Header() {
         <ul className="navbar-nav mx-auto">
           <li className="nav-item px-lg-4"><Link className="nav-link text-uppercase" to="/home">Home</Link></li>
           <li className="nav-item px-lg-4"><Link className="nav-link text-uppercase" to="/contacts">Contacts</Link></li>
-          <li className="nav-item px-lg-4"><a className="nav-link text-uppercase" href="products.html">Products</a></li>
+          <li className="nav-item px-lg-4"><Link className="nav-link text-uppercase" to="/product">Product</Link></li>
           <li className="nav-item px-lg-4"><Link className="nav-link text-uppercase" to="/login">Logout</Link></li>
         </ul>
       </div>

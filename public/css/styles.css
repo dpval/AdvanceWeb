@@ -24,7 +24,7 @@
   --bs-black: #000;
   --bs-white: #fff;
   --bs-gray: #6c757d;
-  --bs-gray-dark: #343a40;
+  --bs-gray-dark: #e3faf3;
   --bs-gray-100: #f8f9fa;
   --bs-gray-200: #e9ecef;
   --bs-gray-300: #dee2e6;
@@ -90,6 +90,34 @@
     scroll-behavior: smooth;
   }
 }
+
+.contact {
+  padding: 20px;
+}
+
+.contactpage {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact-container {
+
+  width: 45%; /* Adjust as needed */
+  margin: 15px;
+  padding: 15px;
+  background-color: #e6a756;
+  border: 1px solid #564218;
+  border-radius: 5px;
+}
+
+.contact-container h2 {
+  margin-top: 0;
+}
+
+.contact-container p {
+  margin-bottom: 0;
+}
+
 
 body {
   margin: 0;
@@ -11027,3 +11055,72 @@ p {
 .address strong {
   font-size: 1.2rem;
 }
+
+
+.background-radial-gradient {
+  background: radial-gradient(circle, rgba(255,255,255,0.5), rgba(255,255,255,0.8)), url('paw-image.jpg'); /* Adjust the background image and opacity as needed */
+}
+
+.form-container {
+  
+  background-color: rgba(255, 255, 255, 0.3); /* Adjust the opacity as needed */
+}
+
+.form-container .card {
+ 
+  background-color: transparent !important; /* Make the card background transparent */
+}
+
+.form-container .form-group {
+
+  background-color: transparent; /* Make the form group background transparent */
+}
+
+.form-container .form-group input {
+  background-color: rgba(255, 255, 255, 0.3); /* Adjust the input field opacity as needed */
+}
+
+.add-products-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.add-products-form {
+  margin-bottom: 20px;
+}
+
+.add-products-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.add-products-form input[type="text"],
+.add-products-form input[type="number"],
+.add-products-form input[type="file"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.add-products-form button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.add-products-form button:hover {
+  background-color: #45a049;
+}
+
+
+

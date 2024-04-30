@@ -7,6 +7,8 @@ import Register from './Components/Signup';
 import NotFound from './Components/NotFound';
 import Contacts from './Components/Contacts';
 
+import Product from './Components/Product';
+
 function App() {
   return (
     <Router>
@@ -18,6 +20,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Register />} />
           <Route path="/contacts" element={<Contacts />} />
+          <Route path="/product" element={<Product />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
