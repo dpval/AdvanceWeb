@@ -1,12 +1,41 @@
-import React from 'react';
-import Header from "./Header";
+import React, { useState, useEffect } from "react";
+import { auth, fs } from '../Config/Firebase'
+import { doc, getDoc, } from 'firebase/firestore';
+import Nav from "./Nav";
 const Contacts = () => {
 
+
+    const [user, setUser] = useState(null);
+
+    useEffect(() => {
+        const unsubscribe = auth.onAuthStateChanged(async (authUser) => {
+            if (authUser) {
+                const userDoc = doc(fs, 'tblUsers', authUser.uid);
+                const userSnapshot = await getDoc(userDoc);
+                setUser(userSnapshot.data()?.FullName || 'User'); 
+            } else {
+                setUser(null);
+            }
+        });
+  
+        return () => unsubscribe();
+    }, []);
+  
+   
+        
+
+
     return (
-     
+    
+        
+     <div>  
+           <>
+          <Nav user={user} />
+        
+      </>        
         <div className="contact">
-            <Header />
-            <h1>Contacts Page</h1>
+         
+            <h1 className="text-center" style={{ color: "white" }}>Emergency Contacts </h1>
          
             <div className="contactpage">
                 <div className="contact-container">
@@ -50,6 +79,7 @@ const Contacts = () => {
                     <p>Hotline: +63 917 848 8850</p>
                 </div>
             </div>
+        </div>
         </div>
     );
 }
